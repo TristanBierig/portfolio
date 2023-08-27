@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+// Global styling variables
+:root {
+    --font-color-blue: rgba(89, 136, 255, 1);
+    --font-color-white: rgba(255, 255, 255, 1);
+
+    --font-headline-mobile-size: 72px;
+    --font-subheadline-mobile-size: 36px;
+    --font-section-headline-mobile-size: 64px;
+    --font-main-para-mobile-size: 24px;
+    --font-para-mobile-size: 16px;
+
+    --background-gradient-color: linear-gradient(180deg, rgba(255, 255, 255, 0.80) 0%, rgba(202, 216, 252, 0.8) 100%);
+
+
+}
+
+
+* {
+    font-family: 'Montserrat';
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
