@@ -1,0 +1,21 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 37px 25px;
+
+    img {
+        height: 64px;
+        width: 64px;
+    }
+
+    svg {
+        height: 30px;
+        width: 30px;
+    }
+
+    nav {
+        display: flex;
+        gap: 36px;
+    }
+}
