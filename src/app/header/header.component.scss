@@ -2,20 +2,31 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 37px 25px;
+    position: relative;
+    width: 85%;
+    margin: auto;
+    padding: 20px 0;
+
 
     img {
         height: 64px;
         width: 64px;
     }
 
-    svg {
-        height: 30px;
-        width: 30px;
-    }
-
     nav {
         display: flex;
         gap: 36px;
     }
+}
+
+.burger-menu {
+    height: 30px;
+    width: 30px;
+}
+
+.atf-bubble {
+    position: absolute;
+    top: -5px;
+    right: -10%;
+    z-index: -1;
 }
