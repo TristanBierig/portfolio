@@ -13,6 +13,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { PreambleComponent } from './preamble/preamble.component';
 import { ButtonPrimaryComponent } from './button-primary/button-primary.component';
 import { ButtonSecondaryComponent } from './button-secondary/button-secondary.component';
+import { BubblesComponent } from './bubbles/bubbles.component';
 
 
 
@@ -25,6 +26,7 @@ import { ButtonSecondaryComponent } from './button-secondary/button-secondary.co
     PreambleComponent,
     ButtonPrimaryComponent,
     ButtonSecondaryComponent,
+    BubblesComponent,
   ],
   imports: [
     BrowserModule,
