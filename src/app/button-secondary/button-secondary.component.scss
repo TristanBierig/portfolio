@@ -1,0 +1,36 @@
+.btn {
+    margin: 20px auto;
+    border: none;
+    padding: 10px 50px;
+    font-size: var(--font-main-para-mobile-size);
+    position: relative;
+    background: none;
+    border-radius: 50px;
+
+    .btn-text {
+        color: var(--font-color-blue);
+        mix-blend-mode: difference;
+        cursor: pointer;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50px;
+        height: 100%;
+        width: 15%;
+        background-color: var(--font-color-blue);
+        transition: all 0.85s cubic-bezier(0.78, -0.35, 0.265, 1.55);
+        z-index: -1;
+    }
+
+    &:hover {
+        &::before {
+            background-color: var(--font-color-blue);
+            width: 100%;
+        }
+
+    }
+}
