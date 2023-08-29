@@ -10,7 +10,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { NgIf } from '@angular/common';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { PreambleComponent } from './preamble/preamble.component';
+
 
 
 @NgModule({
@@ -19,7 +19,6 @@ import { PreambleComponent } from './preamble/preamble.component';
     HeaderComponent,
     AtfComponent,
     SidenavComponent,
-    PreambleComponent,
   ],
   imports: [
     BrowserModule,
