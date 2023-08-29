@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidenav',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent {
+  @Input() public parentData!: boolean;
+  @Output() public childEvent = new EventEmitter();
 
+  constructor() {
+
+  }
+
+  closeSidenav() {
+    this.childEvent.emit(!this.parentData);
+  }
 }

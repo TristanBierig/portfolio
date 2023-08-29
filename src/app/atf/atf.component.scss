@@ -6,14 +6,15 @@
     width: 100%;
     height: 100svh;
     background: var(--background-gradient-color);
-    z-index: -1;
     overflow: hidden;
+    isolation: isolate;
 }
 
 span {
     width: 85%;
     margin-inline: auto;
     padding: 20px 0;
+    z-index: 1;
 
     * {
         color: var(--font-color-white);

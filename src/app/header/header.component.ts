@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -6,6 +6,18 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
-  showFiller: boolean = false;
+export class HeaderComponent implements OnInit {
+  public showFiller: boolean = false;
+  public showSidenav: boolean = false;
+ 
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+
+  toggleSidenav() {
+    this.showSidenav = !this.showSidenav;
+  }
+
 }

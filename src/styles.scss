@@ -35,7 +35,7 @@ $portfolio-theme: mat.define-light-theme((
 
 // Global styling variables
 :root {
-    --font-color-blue: rgba(89, 136, 255, 1);
+    --font-color-blue: #5988ff;
     --font-color-white: rgba(255, 255, 255, 1);
 
     --font-headline-mobile-size: 60px;
@@ -44,7 +44,7 @@ $portfolio-theme: mat.define-light-theme((
     --font-main-para-mobile-size: 24px;
     --font-para-mobile-size: 16px;
 
-    --background-gradient-color: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(189, 205, 245, 0.8) 100%);
+    --background-gradient-color: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(189, 205, 245, 0.9) 100%);
 }
 
 

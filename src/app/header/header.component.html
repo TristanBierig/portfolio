@@ -1,12 +1,13 @@
 <header>
     <img src="../../assets/img/logo.png" alt="">
 
-    <svg class="burger-menu" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg (click)="toggleSidenav()" class="burger-menu" width="32" height="32" viewBox="0 0 32 32" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
         <path d="M1 2H31" stroke="#5988FF" stroke-width="2" stroke-linecap="round" />
         <path d="M1 16H31" stroke="#5988FF" stroke-width="2" stroke-linecap="round" />
         <path d="M1 30H31" stroke="#5988FF" stroke-width="2" stroke-linecap="round" />
     </svg>
-    
+
     <!-- Background Bubble -->
     <svg class="atf-bubble" width="653" height="653" viewBox="0 0 653 653" fill="none"
         xmlns="http://www.w3.org/2000/svg">
@@ -21,3 +22,5 @@
         </defs>
     </svg>
 </header>
+
+<app-sidenav (childEvent)="showSidenav = $event" [parentData]="showSidenav" [class.sidenav]="showSidenav"></app-sidenav>
