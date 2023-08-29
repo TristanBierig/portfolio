@@ -1,0 +1,55 @@
+:host {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+
+    max-height: 100svh;
+    width: 0;
+    overflow: hidden;
+    background: var(--background-gradient-color);
+    z-index: 2;
+
+    transition: all 250ms ease-in-out;
+}
+
+.sidenav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 85%;
+    margin: auto;
+    padding: 20px 0;
+
+    img:first-child {
+        height: 64px;
+        width: 64px;
+    }
+
+    img:last-child {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    a {
+        display: block;
+        word-wrap: nowrap;
+        font-size: var(--font-main-para-mobile-size);
+        color: var(--font-color-blue);
+    }
+}
