@@ -1,17 +1,50 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$portfolio-primary: mat.define-palette(mat.$indigo-palette);
+$portfolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$portfolio-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$portfolio-theme: mat.define-light-theme((
+  color: (
+    primary: $portfolio-primary,
+    accent: $portfolio-accent,
+    warn: $portfolio-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($portfolio-theme);
+
 // Global styling variables
 :root {
-    --font-color-blue: rgba(89, 136, 255, 1);
+    --font-color-blue: #5988ff;
     --font-color-white: rgba(255, 255, 255, 1);
 
-    --font-headline-mobile-size: 72px;
-    --font-subheadline-mobile-size: 36px;
+    --font-headline-mobile-size: 60px;
+    --font-subheadline-mobile-size: 30px;
     --font-section-headline-mobile-size: 64px;
     --font-main-para-mobile-size: 24px;
     --font-para-mobile-size: 16px;
 
-    --background-gradient-color: linear-gradient(180deg, rgba(255, 255, 255, 0.80) 0%, rgba(202, 216, 252, 0.8) 100%);
-
-
+    --background-gradient-color: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(189, 205, 245, 0.9) 100%);
 }
 
 
@@ -22,8 +55,11 @@
 
 body {
     margin: 0;
+    width: 100%;
 }
 
 a {
     text-decoration: none;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
