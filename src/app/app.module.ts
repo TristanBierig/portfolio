@@ -11,6 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgIf } from '@angular/common';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { PreambleComponent } from './preamble/preamble.component';
+import { ButtonPrimaryComponent } from './button-primary/button-primary.component';
+import { ButtonSecondaryComponent } from './button-secondary/button-secondary.component';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { PreambleComponent } from './preamble/preamble.component';
     AtfComponent,
     SidenavComponent,
     PreambleComponent,
+    ButtonPrimaryComponent,
+    ButtonSecondaryComponent,
   ],
   imports: [
     BrowserModule,
