@@ -20,8 +20,8 @@ export class SkillSetComponent {
         "path": "../../assets/img/skill-icons-mobile/js.svg"
     },
     {
-        "name": "API",
-        "path": "../../assets/img/skill-icons-mobile/api.svg"
+        "name": "Firebase",
+        "path": "../../assets/img/skill-icons-mobile/firebase.svg"
     },
     {
         "name": "HTML",
@@ -36,8 +36,8 @@ export class SkillSetComponent {
         "path": "../../assets/img/skill-icons-mobile/material.svg"
     },
     {
-        "name": "Firebase",
-        "path": "../../assets/img/skill-icons-mobile/firebase.svg"
+        "name": "API",
+        "path": "../../assets/img/skill-icons-mobile/api.svg"
     },
     {
         "name": "Git",

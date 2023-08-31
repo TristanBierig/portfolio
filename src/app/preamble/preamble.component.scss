@@ -1,5 +1,5 @@
 :host {
-    position: relative; 
+    position: relative;
 }
 
 .first-bubble {
@@ -21,4 +21,7 @@ p {
 
 app-button-secondary {
     margin-top: 20px;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
 }
