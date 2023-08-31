@@ -14,6 +14,7 @@ import { PreambleComponent } from './preamble/preamble.component';
 import { ButtonPrimaryComponent } from './button-primary/button-primary.component';
 import { ButtonSecondaryComponent } from './button-secondary/button-secondary.component';
 import { BubblesComponent } from './bubbles/bubbles.component';
+import { SkillSetComponent } from './skill-set/skill-set.component';
 
 
 
@@ -27,6 +28,7 @@ import { BubblesComponent } from './bubbles/bubbles.component';
     ButtonPrimaryComponent,
     ButtonSecondaryComponent,
     BubblesComponent,
+    SkillSetComponent,
   ],
   imports: [
     BrowserModule,
