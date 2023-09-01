@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./preamble.component.scss']
 })
 export class PreambleComponent {
-
 }

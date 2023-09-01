@@ -13,6 +13,10 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { PreambleComponent } from './preamble/preamble.component';
 import { ButtonPrimaryComponent } from './button-primary/button-primary.component';
 import { ButtonSecondaryComponent } from './button-secondary/button-secondary.component';
+import { BubblesComponent } from './bubbles/bubbles.component';
+import { SkillSetComponent } from './skill-set/skill-set.component';
+import { ProjectListComponent } from './project/project-list/project-list.component';
+import { ProjectElementComponent } from './project/project-element/project-element.component';
 
 
 
@@ -25,6 +29,10 @@ import { ButtonSecondaryComponent } from './button-secondary/button-secondary.co
     PreambleComponent,
     ButtonPrimaryComponent,
     ButtonSecondaryComponent,
+    BubblesComponent,
+    SkillSetComponent,
+    ProjectListComponent,
+    ProjectElementComponent,
   ],
   imports: [
     BrowserModule,

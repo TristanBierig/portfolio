@@ -1,0 +1,27 @@
+:host {
+    position: relative;
+}
+
+.first-bubble {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-70%, -50%);
+}
+
+.second-bubble {
+    position: absolute;
+    top: 40px;
+    right: 0;
+}
+
+p {
+    margin: 0;
+}
+
+app-button-secondary {
+    margin-top: 20px;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
