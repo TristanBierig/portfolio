@@ -1,17 +1,17 @@
 <section class="element-wrapper">
     <img data-aos="fade-up" data-aos-anchor-placement="top-center" src="{{ project.image }}" alt="">
 
-    <div data-aos="fade-up">
+    <div class="lower-wrapper" data-aos="fade-up" data-aos-anchor-placement="top-center">
         <h3 class="section-headline">{{ project.name }}</h3>
 
-        <div>
+        <div class="tool-wrapper">
             <span *ngFor="let tool of project.tools; let last = last">
                 {{ tool }}
                 <span *ngIf="!last">|</span>
             </span>
         </div>
 
-        <span>
+        <span class="summary">
             {{ project.summary }}
         </span>
 
