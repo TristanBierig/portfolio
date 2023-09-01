@@ -5,6 +5,9 @@
     Feel free to try them out or just browse through the code.
 </p>
 
-<app-project-element *ngFor="let project of projectList" [project]="project">
-    
-</app-project-element>
+<section class="app-project-element-container">
+    <app-project-element 
+    *ngFor="let project of projectList" 
+    [project]="project">
+    </app-project-element>
+</section>

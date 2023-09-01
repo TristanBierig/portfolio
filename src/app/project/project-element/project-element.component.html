@@ -1,18 +1,22 @@
 <section class="element-wrapper">
-    <img src="{{ project.image }}" alt="">
+    <img data-aos="fade-up" data-aos-anchor-placement="top-center" src="{{ project.image }}" alt="">
 
-    <div>
-        <h3>{{ project.name }}</h3>
+    <div data-aos="fade-up">
+        <h3 class="section-headline">{{ project.name }}</h3>
 
-        <span>
-            Javascript | HTML | CSS | Github
-        </span>
+        <div>
+            <span *ngFor="let tool of project.tools; let last = last">
+                {{ tool }}
+                <span *ngIf="!last">|</span>
+            </span>
+        </div>
 
         <span>
             {{ project.summary }}
         </span>
 
         <div class="btn-wrapper">
+            <app-button-primary></app-button-primary>
             <app-button-secondary></app-button-secondary>
         </div>
     </div>

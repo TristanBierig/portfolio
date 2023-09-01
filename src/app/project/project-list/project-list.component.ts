@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import * as Aos from 'aos';
+
 
 @Component({
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
   styleUrls: ['./project-list.component.scss']
 })
-export class ProjectListComponent {
+export class ProjectListComponent implements OnInit {
   public projectList: any[] = [
     {
       name: 'Join',
@@ -26,4 +28,8 @@ export class ProjectListComponent {
       image: '../../assets/img/project-thumbnail/pokedex.png'
     },
   ];
+
+  ngOnInit(): void {
+    Aos.init();
+  }
 }
