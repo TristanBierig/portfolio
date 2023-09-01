@@ -15,6 +15,8 @@ import { ButtonPrimaryComponent } from './button-primary/button-primary.componen
 import { ButtonSecondaryComponent } from './button-secondary/button-secondary.component';
 import { BubblesComponent } from './bubbles/bubbles.component';
 import { SkillSetComponent } from './skill-set/skill-set.component';
+import { ProjectListComponent } from './project/project-list/project-list.component';
+import { ProjectElementComponent } from './project/project-element/project-element.component';
 
 
 
@@ -29,6 +31,8 @@ import { SkillSetComponent } from './skill-set/skill-set.component';
     ButtonSecondaryComponent,
     BubblesComponent,
     SkillSetComponent,
+    ProjectListComponent,
+    ProjectElementComponent,
   ],
   imports: [
     BrowserModule,
