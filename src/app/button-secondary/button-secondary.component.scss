@@ -13,6 +13,7 @@
     .btn-text {
         color: var(--font-color-blue);
         mix-blend-mode: difference;
+        white-space: nowrap;
     }
 
     &::before {
