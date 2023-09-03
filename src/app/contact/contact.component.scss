@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    align-items: flex-start;
+    background: var(--background-gradient-color);
+}
+
+section {
+    display: flex;
+    align-items: flex-start;
+}
+
+h4 {
+    color: var(--font-color-blue);
+    font-size: 24px;
+    margin: 0;
+}
+
+h5 {
+    color: var(--font-color-blue);
+    font-weight: 400;
+}

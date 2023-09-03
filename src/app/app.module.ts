@@ -17,6 +17,13 @@ import { BubblesComponent } from './bubbles/bubbles.component';
 import { SkillSetComponent } from './skill-set/skill-set.component';
 import { ProjectListComponent } from './project/project-list/project-list.component';
 import { ProjectElementComponent } from './project/project-element/project-element.component';
+import { ContactComponent } from './contact/contact.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FooterComponent } from './footer/footer.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 
 
@@ -33,6 +40,9 @@ import { ProjectElementComponent } from './project/project-element/project-eleme
     SkillSetComponent,
     ProjectListComponent,
     ProjectElementComponent,
+    ContactComponent,
+    ContactFormComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,9 +50,15 @@ import { ProjectElementComponent } from './project/project-element/project-eleme
     BrowserAnimationsModule,
     MatSidenavModule,
     MatButtonModule,
-    NgIf
+    NgIf,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline' } }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

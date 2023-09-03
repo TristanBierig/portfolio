@@ -1,0 +1,13 @@
+<mat-form-field>
+    <mat-label>Your name</mat-label>
+    <input matInput>
+</mat-form-field>
+<mat-form-field>
+    <mat-label>Your email</mat-label>
+    <input matInput [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+<mat-form-field>
+    <mat-label>Your message</mat-label>
+    <textarea matInput></textarea>
+</mat-form-field>
