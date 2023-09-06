@@ -1,7 +1,7 @@
 .btn {
     position: relative;
     margin: 20px auto;
-    padding: 10px 30px;
+    padding: 10px 44px;
 
     border: none;
     font-size: var(--font-main-para-mobile-size);
@@ -10,7 +10,7 @@
     z-index: 0;
     cursor: pointer;
 
-    .btn-text {
+    &::ng-deep span {
         color: var(--font-color-blue);
         mix-blend-mode: difference;
         white-space: nowrap;
@@ -21,10 +21,9 @@
         position: absolute;
         top: 0;
         left: 0;
-        border-bottom-left-radius: 50px;
-        border-top-left-radius: 50px;
+        border-radius: 44px;
         height: 100%;
-        width: 51%;
+        width: 65%;
         background-color: var(--font-color-blue);
         transition: all 0.85s cubic-bezier(0.78, -0.35, 0.265, 1.55);
         z-index: -1;
@@ -35,10 +34,9 @@
         position: absolute;
         top: 0;
         right: 0;
-        border-bottom-right-radius: 50px;
-        border-top-right-radius: 50px;
+        border-radius: 44px;
         height: 100%;
-        width: 51%;
+        width: 65%;
         background-color: var(--font-color-blue);
         transition: all 0.85s cubic-bezier(0.78, -0.35, 0.265, 1.55);
         z-index: -1;
@@ -46,11 +44,11 @@
 
     &:hover {
         &::before {
-            width: 20%;
+            width: 44px;
         }
 
         &::after {
-            width: 20%;
+            width: 44px;
         }
 
     }
