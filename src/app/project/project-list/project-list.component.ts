@@ -11,18 +11,30 @@ export class ProjectListComponent implements OnInit {
   public projectList: any[] = [
     {
       name: 'Join',
+      links: {
+        demo: 'https://join.tristan-bierig.de/',
+        github: 'https://github.com/TristanBierig/join'
+      },
       tools: ['Javascript', 'HTML', 'CSS', 'Github'],
       summary: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       image: '../../assets/img/project-thumbnail/join.png'
     },
     {
       name: 'Elemental Masters',
+      links: {
+        demo: 'https://elementalmasters.tristan-bierig.de/',
+        github: 'https://github.com/TristanBierig/elemental_masters'
+      },
       tools: ['Javascript', 'HTML', 'CSS', 'OOP'],
       summary: "2D-Platform Jump 'n' Run Game based on object-oriented approach. Choose an Element and fight against the army of slimes. Collect Mana and Stars to cast spells and unleash the true power of the Element!",
       image: '../../assets/img/project-thumbnail/elemental-masters.png'
     },
     {
       name: 'Pokédex',
+      links: {
+        demo: 'https://pokedex.tristan-bierig.de/',
+        github: 'https://github.com/TristanBierig/pokedex'
+      },
       tools: ['Javascript', 'HTML', 'CSS', 'API'],
       summary: 'Based on the PokéAPI. A simple library that provides and catalogues pokemon information',
       image: '../../assets/img/project-thumbnail/pokedex.png'

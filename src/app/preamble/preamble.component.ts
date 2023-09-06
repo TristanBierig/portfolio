@@ -1,9 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-preamble',
   templateUrl: './preamble.component.html',
-  styleUrls: ['./preamble.component.scss']
+  styleUrls: ['./preamble.component.scss'],
 })
-export class PreambleComponent {
+export class PreambleComponent implements OnInit {
+
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  scrollTo(target: HTMLElement) {
+    target.scrollIntoView();
+
+  }
 }

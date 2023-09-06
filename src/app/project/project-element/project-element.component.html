@@ -26,10 +26,10 @@
 
     <div class="btn-wrapper">
       <app-button-primary>
-        <span>Live test</span>
+        <span (click)="redirectToProject(project.links.demo)">Live test</span>
       </app-button-primary>
       <app-button-secondary>
-        <span>Github</span>
+        <span (click)="redirectToProject(project.links.github)">Github</span>
       </app-button-secondary>
     </div>
   </div>
