@@ -1,6 +1,13 @@
 :host {
+    width: 100%;
+}
+
+form {
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    width: 100%;
+    align-items: center;
+
+    mat-form-field {
+        width: 100%;
+    }
 }
