@@ -4,7 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class SidenavService {
-  public sidenavOpen: boolean = false;
-  
+  public sidenavIsOpen: boolean = false;
+
   constructor() {}
+
+  openSidenav() {
+    return true;
+  }
+
+  closeSidenav() {
+    return false;
+  }
 }

@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {}
 
-  toggleSidenav() {
-    this.showSidenav = !this.showSidenav;
+  openSidenav() {
+    this.showSidenav = this._sidenavService.openSidenav();
   }
 }
