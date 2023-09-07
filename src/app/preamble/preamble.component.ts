@@ -7,12 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreambleComponent implements OnInit {
 
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  scrollTo(target: HTMLElement) {
-    target.scrollIntoView();
-
-  }
 }

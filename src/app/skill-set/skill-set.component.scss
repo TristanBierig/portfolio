@@ -1,7 +1,18 @@
 :host {
+    position: relative;
     display: block;
     width: 100%;
-    background: var(--background-gradient-deepblue-color);
+    margin-bottom: 64px;
+    isolation: isolate;
+    
+    &::after {
+        content: '';
+        background: var(--background-gradient-deepblue-color);
+        position: absolute;
+        inset: 0;
+        transform: skewY(5deg);
+        z-index: -1;
+    }
 }
 
 h3 {
@@ -32,4 +43,3 @@ h3 {
         }
     }
 }
-

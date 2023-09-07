@@ -25,7 +25,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-
+import { ScrollToDirective } from './directives/scroll-to.directive';
+import { SidenavService } from './sidenav.service';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { MatIconModule } from '@angular/material/icon';
     ContactComponent,
     ContactFormComponent,
     FooterComponent,
+    ScrollToDirective,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +64,7 @@ import { MatIconModule } from '@angular/material/icon';
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
       useValue: { appearance: 'outline' },
     },
+    SidenavService,
   ],
   bootstrap: [AppComponent],
 })
