@@ -1,18 +1,48 @@
-<form action="">
+<form
+  [formGroup]="contactForm"
+  action="https://tristan-bierig.de/send_mail.php"
+  method="post"
+  (ngSubmit)="onSubmit()"
+  #form="ngForm"
+>
   <mat-form-field>
     <mat-label>Your name</mat-label>
-    <input matInput />
+    <input
+      required
+      [formControl]="nameControl"
+      matInput
+      type="text"
+      name="name"
+    />
+    <mat-error *ngIf="nameControl.invalid">{{
+      getErrorMessageName()
+    }}</mat-error>
   </mat-form-field>
+
   <mat-form-field>
     <mat-label>Your email</mat-label>
-    <input matInput />
-    <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+    <input [formControl]="emailControl" matInput type="email" />
+    <mat-error *ngIf="emailControl.invalid">{{
+      getErrorMessageEmail()
+    }}</mat-error>
   </mat-form-field>
+
   <mat-form-field>
     <mat-label>Your message</mat-label>
-    <textarea matInput></textarea>
+    <textarea
+      [formControl]="messageControl"
+      type="text"
+      matInput
+      name="message"
+    ></textarea>
+    <mat-error *ngIf="messageControl.invalid">{{
+      getErrorMessageText()
+    }}</mat-error>
   </mat-form-field>
-  <app-button-primary>
-    <span>Say hello</span>
-  </app-button-primary>
+
+  <button type="submit" [disabled]="!form.form.valid">
+    <app-button-primary>
+      <span>Say hello</span>
+    </app-button-primary>
+  </button>
 </form>
