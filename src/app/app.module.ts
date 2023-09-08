@@ -10,8 +10,23 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { NgIf } from '@angular/common';
 import { SidenavComponent } from './sidenav/sidenav.component';
-
-
+import { PreambleComponent } from './preamble/preamble.component';
+import { ButtonPrimaryComponent } from './button-primary/button-primary.component';
+import { ButtonSecondaryComponent } from './button-secondary/button-secondary.component';
+import { BubblesComponent } from './bubbles/bubbles.component';
+import { SkillSetComponent } from './skill-set/skill-set.component';
+import { ProjectListComponent } from './project/project-list/project-list.component';
+import { ProjectElementComponent } from './project/project-element/project-element.component';
+import { ContactComponent } from './contact/contact.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FooterComponent } from './footer/footer.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { ScrollToDirective } from './directives/scroll-to.directive';
+import { SidenavService } from './sidenav.service';
 
 @NgModule({
   declarations: [
@@ -19,6 +34,17 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     HeaderComponent,
     AtfComponent,
     SidenavComponent,
+    PreambleComponent,
+    ButtonPrimaryComponent,
+    ButtonSecondaryComponent,
+    BubblesComponent,
+    SkillSetComponent,
+    ProjectListComponent,
+    ProjectElementComponent,
+    ContactComponent,
+    ContactFormComponent,
+    FooterComponent,
+    ScrollToDirective,
   ],
   imports: [
     BrowserModule,
@@ -26,9 +52,20 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     BrowserAnimationsModule,
     MatSidenavModule,
     MatButtonModule,
-    NgIf
+    NgIf,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatIconModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: { appearance: 'outline' },
+    },
+    SidenavService,
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

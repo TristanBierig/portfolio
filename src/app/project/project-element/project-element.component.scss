@@ -1,0 +1,38 @@
+
+
+img {
+    width: 100%;
+    margin-bottom: 32px;
+    box-shadow: 3px 0 15px rgba($color: #000000, $alpha: 0.3);
+}
+
+h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.lower-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.tool-wrapper {
+    span {
+        color: var(--font-color-blue);
+        font-size: var(--font-main-para-mobile-size);
+    }
+}
+
+.summary {
+    text-align: center;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    
+}
