@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SidenavService } from '../sidenav.service';
+import { clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 @Component({
   selector: 'app-sidenav',
@@ -14,6 +15,6 @@ export class SidenavComponent {
 
   closeSidenav() {
     this.childEvent.emit(this._sidenavService.closeSidenav());
-    
+    clearAllBodyScrollLocks();
   }
 }
