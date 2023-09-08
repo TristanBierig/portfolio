@@ -14,5 +14,6 @@ export class SidenavComponent {
 
   closeSidenav() {
     this.childEvent.emit(this._sidenavService.closeSidenav());
+    
   }
 }

@@ -23,4 +23,4 @@
     </svg>
 </header>
 
-<app-sidenav (childEvent)="showSidenav = $event" [parentData]="showSidenav" [class.sidenav]="showSidenav"></app-sidenav>
+<app-sidenav #sideNav (childEvent)="showSidenav = $event" [parentData]="showSidenav" [class.sidenav]="showSidenav"></app-sidenav>
