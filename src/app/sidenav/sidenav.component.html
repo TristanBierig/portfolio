@@ -1,11 +1,15 @@
 <div class="sidenav-header">
-    <img src="../../assets/img/logo-blue.png" alt="Logo of my webpage">
-    <img (click)="closeSidenav()"  src="../../assets/img/icons/close.png" alt="Blue X">
+  <img src="../../assets/img/logo-blue.png" alt="Logo of my webpage" />
+  <img
+    (click)="closeSidenav()"
+    src="../../assets/img/icons/close.png"
+    alt="Blue X"
+  />
 </div>
 
 <nav>
-    <a href="#">About me</a>
-    <a href="#">Skill set</a>
-    <a href="#">My work</a>
-    <a href="#">Contact</a>
+  <a (click)="closeSidenav()" appScrollTo target="#preamble">About me</a>
+  <a (click)="closeSidenav()" appScrollTo target="#skillSet">Skill set</a>
+  <a (click)="closeSidenav()" appScrollTo target="#projects">My work</a>
+  <a (click)="closeSidenav()" appScrollTo target="#contactSection">Contact</a>
 </nav>
