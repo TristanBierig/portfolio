@@ -27,6 +27,7 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { ScrollToDirective } from './directives/scroll-to.directive';
 import { SidenavService } from './sidenav.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { SidenavService } from './sidenav.service';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
+    HttpClientModule,
   ],
   providers: [
     {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MailService } from '../mail.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -11,6 +12,8 @@ export class ContactFormComponent implements OnInit {
   // name: FormControl;
   // email: FormControl;
   // message: FormControl;
+
+  constructor(private _mailService: MailService) {}
 
   ngOnInit(): void {
     this.createForm();
@@ -50,8 +53,18 @@ export class ContactFormComponent implements OnInit {
   }
 
   onSubmit() {
+    // debugger;
     if (this.contactForm.valid) {
+      let name = this.contactForm.value.name;
+      let message = this.contactForm.value.message;
+
+      console.log(this.contactForm.value);
+      console.log(name, message);
       console.log('Form submitted');
+      
+      this._mailService
+        .sendMail('TestName', 'TestNachricht')
+        .subscribe((email) => console.log('Email send succesfully', email));
       this.contactForm.reset();
     }
   }
