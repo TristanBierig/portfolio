@@ -9,9 +9,9 @@ import { MailService } from '../mail.service';
 })
 export class ContactFormComponent implements OnInit {
   contactForm!: FormGroup;
-  // name: FormControl;
-  // email: FormControl;
-  // message: FormControl;
+  formName: string = '';
+  formEmail: string = '';
+  formMessage: string = '';
 
   constructor(private _mailService: MailService) {}
 
@@ -61,11 +61,18 @@ export class ContactFormComponent implements OnInit {
       console.log(this.contactForm.value);
       console.log(name, message);
       console.log('Form submitted');
-      
-      this._mailService
-        .sendMail('TestName', 'TestNachricht')
-        .subscribe((email) => console.log('Email send succesfully', email));
-      this.contactForm.reset();
+
+      this._mailService.sendMail('TestName', 'TestNachricht').subscribe({
+        next: (response) => {
+          this.contactForm.reset();
+        },
+        error: (error) => {
+          console.log(error);
+        },
+        complete: () => {
+          console.log('Email send succesfully');
+        },
+      });
     }
   }
 }

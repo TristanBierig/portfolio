@@ -28,6 +28,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ScrollToDirective } from './directives/scroll-to.directive';
 import { SidenavService } from './sidenav.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MailService } from './mail.service';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { HttpClientModule } from '@angular/common/http';
       useValue: { appearance: 'outline' },
     },
     SidenavService,
+    MailService,
   ],
   bootstrap: [AppComponent],
 })
