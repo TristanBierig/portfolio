@@ -1,5 +1,3 @@
-
-
 img {
     width: 100%;
     margin-bottom: 32px;
@@ -33,6 +31,23 @@ h3 {
     display: flex;
     justify-content: center;
     gap: 16px;
+}
 
-    
+.img-wrapper {
+    position: relative;
+
+    &::ng-deep app-bubbles {
+        position: absolute;
+        z-index: -1;
+
+        &.odd-bubble {
+            top: 10%;
+            left: -40%;
+        }
+
+        &.even-bubble {
+            top: -20%;
+            right: -20%;
+        }
+    }
 }

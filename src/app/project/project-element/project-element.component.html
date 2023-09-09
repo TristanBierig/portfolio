@@ -1,10 +1,13 @@
 <section class="element-wrapper">
-  <img
-    data-aos="fade-up"
-    data-aos-anchor-placement="center-bottom"
-    src="{{ project.image }}"
-    alt=""
-  />
+  <div class="img-wrapper">
+    <img
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
+      src="{{ project.image }}"
+      alt=""
+    />
+    <ng-content></ng-content>
+  </div>
 
   <div
     class="lower-wrapper"

@@ -1,12 +1,22 @@
-<h3 class="section-headline">My work</h3>
+<h3 class="section-headline">
+  My work
+  <app-bubbles class="first-bubble" [height]="60"></app-bubbles>
+  <app-bubbles class="second-bubble" [height]="80"></app-bubbles>
+</h3>
+
 <p>
-  For the last couple of months I worked on the following projects.
-  <br />
-  <br />
-  Feel free to try them out or just browse through the code.
+  This page is a sample of my work - please <br />
+  feel free to try them out.
 </p>
 
 <section class="app-project-element-container">
-  <app-project-element *ngFor="let project of projectList" [project]="project">
+  <app-project-element
+    *ngFor="let project of projectList; let even = even; let odd = odd"
+    [project]="project"
+  >
+    <app-bubbles
+      [ngClass]="{ 'odd-bubble': odd, 'even-bubble': even }"
+      [height]="220"
+    ></app-bubbles>
   </app-project-element>
 </section>
