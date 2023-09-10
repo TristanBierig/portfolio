@@ -30,6 +30,7 @@ import { SidenavService } from './sidenav.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MailService } from './mail.service';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { MatDividerModule } from '@angular/material/divider';
     ReactiveFormsModule,
     MatIconModule,
     HttpClientModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSnackBarModule,
   ],
   providers: [
     {

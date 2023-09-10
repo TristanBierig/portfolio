@@ -1,0 +1,71 @@
+<form
+  (ngSubmit)="onSubmit(contactForm)"
+  #contactForm="ngForm"
+  novalidate
+  autocomplete="off"
+>
+  <mat-form-field>
+    <mat-label>Your name</mat-label>
+    <input
+      #name="ngModel"
+      required
+      matInput
+      [(ngModel)]="contactModel.name"
+      type="text"
+      name="name"
+    />
+    <mat-error
+      *ngIf="
+        name.errors && name.errors['required'] && (name.invalid || name.touched)
+      "
+    >
+      Please enter your name
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Your email</mat-label>
+    <input
+      #email="ngModel"
+      required
+      matInput
+      [(ngModel)]="contactModel.email"
+      type="email"
+      pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+      name="email"
+    />
+    <mat-error *ngIf="email.errors && (email.invalid || email.touched)">
+      <small *ngIf="email.errors['required']">Please enter your email</small>
+      <small *ngIf="email.errors['pattern']"
+        >Text needs to be a valid email</small
+      >
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Your message</mat-label>
+    <textarea
+      #message="ngModel"
+      required
+      matInput
+      [(ngModel)]="contactModel.message"
+      type="text"
+      name="message"
+    ></textarea>
+    <mat-error
+      *ngIf="
+        message.errors &&
+        message.errors['required'] &&
+        (message.invalid || message.touched)
+      "
+    >
+      Please leave me a message
+    </mat-error>
+  </mat-form-field>
+
+  <button type="submit">
+    <app-button-primary>
+      <span>Say hello</span>
+    </app-button-primary>
+  </button>
+</form>

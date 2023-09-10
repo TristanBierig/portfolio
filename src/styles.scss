@@ -107,6 +107,18 @@ a {
   color: var(--font-color-white);
 }
 
-.bg-primary {
-  background-color: mat.get-color-from-palette($primary-palette, 500);
+.mat-mdc-snack-bar-container {
+  &.snackbar-success {
+    --mdc-snackbar-container-color: var(--font-color-blue);
+    --mat-mdc-snack-bar-button-color: #fff;
+    --mat-snack-bar-button-color: #fff;
+    --mdc-snackbar-supporting-text-color: #fff;
+  }
+
+  &.snackbar-error {
+    --mdc-snackbar-container-color: #FF8573;
+    --mat-mdc-snack-bar-button-color: #fff;
+    --mat-snack-bar-button-color: #fff;
+    --mdc-snackbar-supporting-text-color: #fff;
+  }
 }
