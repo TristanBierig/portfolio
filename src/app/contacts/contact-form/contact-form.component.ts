@@ -24,8 +24,6 @@ export class ContactFormComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(ngForm: any) {
-    console.log(ngForm);
-
     if (ngForm.valid) {
       this._mailService.sendMail(this.contactModel).subscribe({
         next: (response) => {
@@ -44,6 +42,7 @@ export class ContactFormComponent implements OnInit {
             duration: 10000,
             panelClass: ['snackbar-success'],
           });
+          ngForm.resetForm();
         },
       });
     }
