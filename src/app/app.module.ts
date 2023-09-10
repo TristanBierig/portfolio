@@ -11,14 +11,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgIf } from '@angular/common';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { PreambleComponent } from './preamble/preamble.component';
-import { ButtonPrimaryComponent } from './button-primary/button-primary.component';
-import { ButtonSecondaryComponent } from './button-secondary/button-secondary.component';
+import { ButtonPrimaryComponent } from './buttons/button-primary/button-primary.component';
+import { ButtonSecondaryComponent } from './buttons/button-secondary/button-secondary.component';
 import { BubblesComponent } from './bubbles/bubbles.component';
 import { SkillSetComponent } from './skill-set/skill-set.component';
 import { ProjectListComponent } from './project/project-list/project-list.component';
 import { ProjectElementComponent } from './project/project-element/project-element.component';
-import { ContactComponent } from './contact/contact.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ContactComponent } from './contacts/contact-section/contact.component';
+import { ContactFormComponent } from './contacts/contact-form/contact-form.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -27,6 +27,10 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { ScrollToDirective } from './directives/scroll-to.directive';
 import { SidenavService } from './sidenav.service';
+import { HttpClientModule } from '@angular/common/http';
+import { MailService } from './mail.service';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -58,6 +62,9 @@ import { SidenavService } from './sidenav.service';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
+    HttpClientModule,
+    MatDividerModule,
+    MatSnackBarModule,
   ],
   providers: [
     {
@@ -65,6 +72,7 @@ import { SidenavService } from './sidenav.service';
       useValue: { appearance: 'outline' },
     },
     SidenavService,
+    MailService,
   ],
   bootstrap: [AppComponent],
 })
