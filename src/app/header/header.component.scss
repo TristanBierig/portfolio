@@ -1,3 +1,4 @@
+
 header {
     display: flex;
     justify-content: space-between;
@@ -26,12 +27,6 @@ header {
     cursor: pointer;
 }
 
-.atf-bubble {
-    position: absolute;
-    top: -5px;
-    right: -10%;
-    z-index: -1;
-}
 
 .sidenav {
     width: 100%;
