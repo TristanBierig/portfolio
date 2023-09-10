@@ -35,9 +35,9 @@
       name="email"
     />
     <mat-error *ngIf="email.errors && (email.invalid || email.touched)">
-      <small *ngIf="email.errors['required']">Please enter your email</small>
-      <small *ngIf="email.errors['pattern']"
-        >Text needs to be a valid email</small
+      <span *ngIf="email.errors['required']">Please enter your email</span>
+      <span *ngIf="email.errors['pattern']"
+        >Text needs to be a valid email</span
       >
     </mat-error>
   </mat-form-field>

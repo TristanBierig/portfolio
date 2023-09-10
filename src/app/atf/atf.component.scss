@@ -44,3 +44,10 @@ span {
     min-height: 500px;
     object-fit: contain;
 }
+
+.first-bubble {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-70%, 50%);
+}
