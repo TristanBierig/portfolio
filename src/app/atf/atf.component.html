@@ -1,11 +1,17 @@
-<app-header></app-header>
+<app-header id="header"></app-header>
 
 <span>
-    <h2>Hello! I am Tristan</h2>
-    <h1>Frontend Developer</h1>
+  <h2>Hello! I am Tristan</h2>
+  <h1>Frontend Developer</h1>
 </span>
 
-<img class="portrait-img" src="../../assets/img/portrait-lang.png" alt="Portrait image of myself">
+<img
+  class="portrait-img"
+  src="../../assets/img/portrait-lang.png"
+  alt="Portrait image of myself"
+/>
 
+<app-bubbles class="first-bubble" [height]="150"></app-bubbles>
 
-
+<!-- Background Bubble -->
+<app-bubbles class="atf-bubble"></app-bubbles>
