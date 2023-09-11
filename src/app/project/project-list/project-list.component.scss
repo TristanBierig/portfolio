@@ -1,47 +1,38 @@
-:host {
-    overflow: hidden;
-}
+.project-list-mobile {
+    margin-inline: 32px;
+    width: calc(100% - 64px);
 
-h3 {
-    margin-top: 60px;
-    margin-bottom: 30px;
-    position: relative;
-}
+    h3 {
+        margin-top: 60px;
+        margin-bottom: 30px;
+        position: relative;
+    }
 
-p {
-    margin-top: 0;
-}
+    p {
+        margin-top: 0;
+    }
 
-.header-wrapper {
-    padding: 24px 48px 48px 48px;
-}
+    .section-headline {
+        position: relative;
+    }
 
-.section-headline {
-    position: relative;
-}
+    .app-project-element-container {
+        img {
+            display: block;
+        }
+    }
 
-.app-project-element-container {
-    width: 100%;
-    padding: 48px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 128px;
-    margin-bottom: 128px;
-    overflow: hidden;
-}
+    app-bubbles {
+        position: absolute;
+    }
 
-app-bubbles {
-    position: absolute;
-}
+    .first-bubble {
+        left: -20px;
+        top: -110px;
+    }
 
-.first-bubble {
-    left: -30px;
-    top: -100px;
-}
-
-.second-bubble {
-    top: -30px;
-    right: -30px;
+    .second-bubble {
+        top: -40px;
+        right: -20px;
+    }
 }

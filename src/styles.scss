@@ -74,6 +74,7 @@ a {
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 6px;
+  display: none;
 }
 
 *::-webkit-scrollbar-track {
@@ -92,15 +93,6 @@ a {
   font-size: var(--font-section-headline-mobile-size);
   color: var(--font-color-blue);
   line-height: 120%;
-}
-
-.section-container {
-  min-height: 100svh;
-  width: 85%;
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .font-white {

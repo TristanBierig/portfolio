@@ -1,14 +1,21 @@
 :host {
+    min-height: max-content !important;
+}
+
+.skill-mobile {
     position: relative;
     display: block;
-    width: 100%;
+    width: calc(100% - 64px);
     margin-bottom: 64px;
+    margin-inline: 32px;
     isolation: isolate;
-    
+
     &::after {
         content: '';
         background: var(--background-gradient-deepblue-color);
         position: absolute;
+        left: -32px !important;
+        right: -32px !important;
         inset: 0;
         transform: skewY(5deg);
         z-index: -1;
@@ -16,6 +23,7 @@
 }
 
 h3 {
+    text-align: center;
     margin-top: 36px;
     margin-bottom: 72px;
 }

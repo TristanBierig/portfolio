@@ -1,11 +1,15 @@
 :host {
+    min-height: fit-content !important;
+    background: var(--background-gradient-deepblue-color);
+}
+
+.footer-mobile {
     padding: 64px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 32px;
-    background: var(--background-gradient-deepblue-color);
 }
 
 .white-font {

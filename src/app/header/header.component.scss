@@ -1,13 +1,10 @@
-
-header {
+.header-mobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    width: 85%;
-    margin: auto;
+    margin-inline: 32px;
     padding: 20px 0;
-
 
     img {
         height: 64px;
@@ -18,13 +15,13 @@ header {
         display: flex;
         gap: 36px;
     }
-}
 
-.burger-menu {
-    height: 30px;
-    width: 30px;
-    z-index: 2;
-    cursor: pointer;
+    .burger-menu {
+        height: 30px;
+        width: 30px;
+        z-index: 2;
+        cursor: pointer;
+    }
 }
 
 

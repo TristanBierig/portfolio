@@ -9,7 +9,7 @@
     width: 0;
     overflow: hidden;
     background: var(--background-gradient-color);
-    z-index: 3;
+    z-index: 4;
 
     transition: all 250ms ease-in-out;
 }
@@ -31,6 +31,7 @@
     img:last-child {
         height: 30px;
         width: 30px;
+        cursor: pointer;
     }
 }
 

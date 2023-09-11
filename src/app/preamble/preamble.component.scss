@@ -1,29 +1,37 @@
 :host {
+    min-height: max-content !important;
+}
+
+.preamble-mobile {
     position: relative;
+    margin-inline: 32px;
     overflow: hidden;
-}
-
-.first-bubble {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-70%, -50%);
-}
-
-.second-bubble {
-    position: absolute;
-    top: 40px;
-    right: 0;
-}
-
-p {
-    margin: 0;
-}
-
-app-button-secondary {
-    margin-top: 20px;
-    margin-bottom: 64px;
     display: flex;
-    flex-grow: 1;
-    align-items: center;
+    flex-direction: column;
+
+    .first-bubble {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-70%, -50%);
+    }
+
+    .second-bubble {
+        position: absolute;
+        top: 40px;
+        right: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    app-button-secondary {
+        margin-top: 64px;
+        margin-bottom: 64px;
+        margin-inline: auto;
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+    }
 }

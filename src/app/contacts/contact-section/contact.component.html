@@ -1,4 +1,4 @@
-<section id="contactSection" class="section-container">
+<section id="contactSection" class="contact-mobile">
   <h3 class="section-headline">Contact</h3>
   <h4>Got a problem to solve?</h4>
   <p>
@@ -8,11 +8,11 @@
   <h5>Need a Frontend-Developer? <strong>Contact me!</strong></h5>
 
   <app-contact-form></app-contact-form>
+
+  <app-bubbles class="right-bubble" [height]="50"></app-bubbles>
+  
+  <a href="#header" class="scroll-top-wrapper">
+    <mat-icon aria-hidden="false" fontIcon="arrow_upward"></mat-icon>
+    <app-bubbles class="scroll-top" [height]="50"></app-bubbles>
+  </a>
 </section>
-
-<app-bubbles class="right-bubble" [height]="50"></app-bubbles>
-
-<a href="#header" class="scroll-top-wrapper">
-  <mat-icon aria-hidden="false" fontIcon="arrow_upward"></mat-icon>
-  <app-bubbles class="scroll-top" [height]="50"></app-bubbles>
-</a>
