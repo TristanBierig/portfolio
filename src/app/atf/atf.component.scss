@@ -1,3 +1,4 @@
+// Mobile Design
 .atf-mobile {
     display: flex;
     flex-direction: column;
@@ -59,5 +60,105 @@
         left: 50%;
         transform: translate(-70%, 50%);
         z-index: 1;
+    }
+}
+
+// Tablet Design
+.atf-tablet {
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    height: 100svh;
+    background: var(--background-gradient-color);
+    overflow: hidden;
+    isolation: isolate;
+
+    #header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+
+    .headline-wrapper {
+        position: absolute;
+        right: 128px; // Needs to align content below
+        top: 20%;
+        max-height: 20%;
+        z-index: 1;
+        width: max-content;
+
+        * {
+            color: var(--font-color-blue);
+        }
+
+        h1 {
+            margin: 0;
+            font-family: 'Baloo';
+            font-size: 100px;
+            line-height: 1;
+        }
+
+        h2 {
+            margin: 0;
+            font-weight: 400;
+            font-size: 36px;
+        }
+    }
+
+    .atf-bubble {
+        position: absolute;
+        top: -40%;
+        left: -25%;
+        z-index: -1;
+    }
+
+    .portrait-img {
+        margin-left: 128px; // Needs to align content below
+        height: 80%;
+        object-fit: contain;
+        align-self: flex-end;
+        z-index: 2;
+    }
+
+    .social-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        right: 80px;
+        bottom: 40px;
+    }
+
+    .scroll-wrapper {
+        position: absolute;
+        right: 250px;
+        bottom: 30%;
+
+        color: var(--font-color-blue);
+        font-size: var(--font-subheadline-mobile-size);
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -300px;
+
+            transform: translateX(-50%);
+            width: 2px;
+            height: 300px;
+            background-color: var(--font-color-blue);
+
+        }
+    }
+
+    .first-bubble {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-70%, 50%);
+        z-index: 2;
     }
 }

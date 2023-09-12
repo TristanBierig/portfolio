@@ -1,4 +1,4 @@
-<section class="atf-mobile">
+<!-- <section class="atf-mobile">
   <app-header id="header"></app-header>
 
   <span>
@@ -15,5 +15,42 @@
 
   <app-bubbles class="first-bubble" [height]="150"></app-bubbles>
 
-  <!-- Background Bubble -->
+</section> -->
+
+<section class="atf-tablet">
+  <app-header id="header"></app-header>
+  <app-bubbles [height]="900" class="atf-bubble"></app-bubbles>
+
+  <img
+    class="portrait-img"
+    src="../../assets/img/portrait-lang.png"
+    alt="Portrait image of myself"
+  />
+
+  <span class="headline-wrapper">
+    <h2>Hello! I am Tristan</h2>
+    <h1>
+      Frontend <br />
+      Developer
+    </h1>
+  </span>
+
+  <div class="scroll-wrapper">
+    <span>Scroll</span>
+  </div>
+
+
+  <div class="social-wrapper">
+    <a href="https://github.com/TristanBierig" target="_blank"
+      ><img src="../../assets/img/icons/github-blue.png" alt="Github logo"
+    /></a>
+    <a href="#contactSection"
+      ><img src="../../assets/img/icons/contact-blue.png" alt="Mail icon"
+    /></a>
+    <a href="https://www.linkedin.com/in/tristan-bierig/" target="_blank"
+      ><img src="../../assets/img/icons/linked-blue.png" alt="LinkedIn logo"
+    /></a>
+  </div>
+
+  <app-bubbles class="first-bubble" [height]="200"></app-bubbles>
 </section>

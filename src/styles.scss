@@ -44,6 +44,7 @@ $primary-palette: map.get($color-config, 'primary');
   --font-section-headline-mobile-size: 56px;
   --font-main-para-mobile-size: 20px;
   --font-para-mobile-size: 16px;
+  --font-headline-size: 72px;
 
   --background-gradient-color: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(189, 205, 245, 0.9) 100%);
   --background-gradient-deepblue-color: linear-gradient(129deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
@@ -74,7 +75,7 @@ a {
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 6px;
-  display: none;
+  // display: none;
 }
 
 *::-webkit-scrollbar-track {

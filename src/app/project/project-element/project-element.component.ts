@@ -8,6 +8,7 @@ import * as AOS from 'aos';
 })
 export class ProjectElementComponent implements OnInit {
   @Input() public project: any;
+  @Input() public odd: any;
 
   ngOnInit(): void {
     AOS.init();
