@@ -1,7 +1,8 @@
 <header class="header-mobile">
   <img src="../../assets/img/logo.png" alt="" />
 
-  <!-- <svg
+  <svg
+    *ngIf="isMobile"
     (click)="openSidenav()"
     class="burger-menu"
     width="32"
@@ -28,8 +29,9 @@
       stroke-width="2"
       stroke-linecap="round"
     />
-  </svg> -->
-  <nav class="navbar-tablet">
+  </svg>
+
+  <nav *ngIf="!isMobile" class="navbar-tablet">
     <a href="#preamble">About me</a>
     <a href="#skillSet">Skill set</a>
     <a href="#projects">My work</a>

@@ -1,9 +1,13 @@
-<!-- <section class="atf-mobile">
+<!-- DOM - Mobile -->
+<section *ngIf="isMobile" class="atf-mobile">
   <app-header id="header"></app-header>
 
   <span>
     <h2>Hello! I am Tristan</h2>
-    <h1>Frontend <br> Developer</h1>
+    <h1>
+      Frontend <br />
+      Developer
+    </h1>
     <app-bubbles class="atf-bubble"></app-bubbles>
   </span>
 
@@ -12,14 +16,13 @@
     src="../../assets/img/portrait-lang.png"
     alt="Portrait image of myself"
   />
-
   <app-bubbles class="first-bubble" [height]="150"></app-bubbles>
+</section>
 
-</section> -->
-
-<section class="atf-tablet">
+<!-- DOM - Tablet and bigger -->
+<section *ngIf="isTablet" class="atf-tablet">
   <app-header id="header"></app-header>
-  <app-bubbles [height]="900" class="atf-bubble"></app-bubbles>
+  <app-bubbles [height]="800" class="atf-bubble"></app-bubbles>
 
   <img
     class="portrait-img"
@@ -38,7 +41,6 @@
   <div class="scroll-wrapper">
     <span>Scroll</span>
   </div>
-
 
   <div class="social-wrapper">
     <a href="https://github.com/TristanBierig" target="_blank"

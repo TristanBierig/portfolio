@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { ResponsiveService } from '../responsive.service';
 
 @Component({
   selector: 'app-atf',
@@ -7,13 +7,23 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
   styleUrls: ['./atf.component.scss'],
 })
 export class AtfComponent implements OnInit {
-  constructor(private responsive: BreakpointObserver) {}
+  isMobile!: boolean;
+  isTablet!: boolean;
+  isDesktop!: boolean;
+  
+  constructor(private ResponsiveService: ResponsiveService) {}
 
   ngOnInit(): void {
-    this.responsive.observe(Breakpoints.Small).subscribe((result) => {
-      if (result.matches) {
-        console.log('Screen matches HandsetPortrait');
-      }
+    this.ResponsiveService.isMobile$.subscribe((isMobile) => {
+      this.isMobile = isMobile;
+    });
+
+    this.ResponsiveService.isTablet$.subscribe((isTablet) => {
+      this.isTablet = isTablet;
+    });
+
+    this.ResponsiveService.isDesktop$.subscribe((isDesktop) => {
+      this.isDesktop = isDesktop;
     });
   }
 }
