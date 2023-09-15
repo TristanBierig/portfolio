@@ -1,5 +1,5 @@
-<!-- <section class="project-list-mobile">
-  
+<!-- DOM Mobile -->
+<section *ngIf="isMobile" class="project-list-mobile">
   <div class="header-wrapper">
     <h3 class="section-headline">
       My work
@@ -21,10 +21,10 @@
       ></app-bubbles>
     </app-project-element>
   </div>
-</section> -->
+</section>
 
-<section class="project-list-tablet">
-  
+<!-- DOM Tablet and bigger -->
+<section *ngIf="isTablet || isDesktop" class="project-list-tablet">
   <div class="header-wrapper">
     <h3 class="section-headline">
       My work
@@ -38,7 +38,8 @@
   <div class="app-project-element-container">
     <app-project-element
       *ngFor="let project of projectList; let even = even; let odd = odd"
-      [project]="project" [odd]="odd"
+      [project]="project"
+      [odd]="odd"
     >
       <app-bubbles
         [ngClass]="{ 'odd-bubble': odd, 'even-bubble': even }"

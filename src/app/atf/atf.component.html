@@ -20,23 +20,28 @@
 </section>
 
 <!-- DOM - Tablet and bigger -->
-<section *ngIf="isTablet" class="atf-tablet">
+<section
+  *ngIf="isTablet || isDesktop"
+  [ngClass]="{ 'atf-tablet': isTablet, 'atf-desktop': isDesktop }"
+>
   <app-header id="header"></app-header>
-  <app-bubbles [height]="800" class="atf-bubble"></app-bubbles>
 
-  <img
-    class="portrait-img"
-    src="../../assets/img/portrait-lang.png"
-    alt="Portrait image of myself"
-  />
+  <div class="main-container">
+    <app-bubbles [height]="1000" class="atf-bubble"></app-bubbles>
+    <img
+      class="portrait-img"
+      src="../../assets/img/portrait-lang.png"
+      alt="Portrait image of myself"
+    />
 
-  <span class="headline-wrapper">
-    <h2>Hello! I am Tristan</h2>
-    <h1>
-      Frontend <br />
-      Developer
-    </h1>
-  </span>
+    <span class="headline-wrapper">
+      <h2>Hello! I am Tristan</h2>
+      <h1>
+        Frontend <br />
+        Developer
+      </h1>
+    </span>
+  </div>
 
   <div class="scroll-wrapper">
     <span>Scroll</span>

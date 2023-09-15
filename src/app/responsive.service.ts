@@ -20,7 +20,7 @@ export class ResponsiveService {
       .pipe(map((result) => result.matches));
 
     this.isDesktop$ = this.responsive
-      .observe(Breakpoints.Large)
+      .observe([Breakpoints.Large, Breakpoints.XLarge])
       .pipe(map((result) => result.matches));
   }
 }
