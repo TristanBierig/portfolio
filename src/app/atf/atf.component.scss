@@ -85,7 +85,8 @@
     }
 
     .main-container {
-        width: 85%;
+        position: relative;
+        width: 100%;
         height: fit-content;
         display: flex;
         justify-content: center;
@@ -124,7 +125,7 @@
 
         .atf-bubble {
             position: absolute;
-            top: -40%;
+            top: -55%;
             left: 0;
             transform: translateX(-50%);
             z-index: -1;
@@ -191,15 +192,22 @@
         left: 0;
         right: 0;
         z-index: 2;
+
+        @media only screen and (min-width: 1921px) {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     .main-container {
-        width: 85%;
+        position: relative;
         height: fit-content;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        gap: 100px;
+        width: 100%;
+        max-width: 1440px;
+        gap: 256px;
 
         .headline-wrapper {
             z-index: 1;
@@ -226,16 +234,24 @@
         }
 
         .portrait-img {
-            height: 650px;
+            height: 750px;
             object-fit: contain;
             align-self: flex-end;
             z-index: 2;
+
+            @media only screen and (min-height: 1441px) {
+                height: 1500px;
+            }
+
+            @media only screen and (max-height: 1440px) and (min-height: 1081px) {
+                height: 1000px;
+            }
         }
 
         .atf-bubble {
             position: absolute;
-            top: -40%;
-            left: -25%;
+            top: -50%;
+            left: -35%;
             z-index: -1;
         }
     }

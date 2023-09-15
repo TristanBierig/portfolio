@@ -59,6 +59,7 @@ $primary-palette: map.get($color-config, 'primary');
 body {
   margin: 0;
   width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -76,10 +77,16 @@ a {
 *::-webkit-scrollbar {
   width: 6px;
   display: none;
+  background: transparent;
+
+  @media only screen and (min-width: 1280px) {
+    display: block;
+  }
 }
 
 *::-webkit-scrollbar-track {
-  background: #ffffff00;
+  background: transparent;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 *::-webkit-scrollbar-thumb {
