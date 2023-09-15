@@ -34,10 +34,20 @@
 }
 
 .navbar-tablet {
-
     margin-right: 64px;
+
+    span {
+        display: flex;
+        justify-content: center;
+        min-width: 74px;
+    }
 
     a {
         color: var(--font-color-blue);
+        transition: 125ms ease-in-out;
+
+        &:hover {
+            font-weight: bold;
+        }
     }
 }

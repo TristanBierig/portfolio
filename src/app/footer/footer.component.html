@@ -1,11 +1,14 @@
-<footer class="footer-mobile">
+<footer [ngClass]="{ 'footer-mobile': isMobile, 'footer-desktop': isDesktop }">
   <a href="#header">
     <img src="../../assets/img/logo.png" alt="" />
   </a>
 
-  <span class="white-font">
-    <mat-icon aria-hidden="false" fontIcon="copyright"> </mat-icon>
-    Tristan Bierig 2023
+  <span class="white-font text-container">
+    <div class="copyright-wrapper">
+      <mat-icon aria-hidden="false" fontIcon="copyright"> </mat-icon>
+      Tristan Bierig 2023
+    </div>
+    <span class="imprint">Impressum</span>
   </span>
 
   <div class="social-wrapper">
@@ -19,6 +22,4 @@
       <img src="../../assets/img/icons/Linkedin button.png" alt="" />
     </a>
   </div>
-
-  <span class="imprint">Impressum</span>
 </footer>
