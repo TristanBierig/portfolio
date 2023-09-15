@@ -31,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MailService } from './mail.service';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ResponsiveService } from './responsive.service';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     },
     SidenavService,
     MailService,
+    ResponsiveService,
   ],
   bootstrap: [AppComponent],
 })

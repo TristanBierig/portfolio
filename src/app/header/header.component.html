@@ -1,7 +1,8 @@
-<header>
-  <img src="../../assets/img/logo.png" alt="" />
+<header class="header-mobile">
+  <img src="../../assets/img/logo_weiß.png" alt="My personal Logo" />
 
   <svg
+    *ngIf="isMobile"
     (click)="openSidenav()"
     class="burger-menu"
     width="32"
@@ -29,6 +30,13 @@
       stroke-linecap="round"
     />
   </svg>
+
+  <nav *ngIf="!isMobile" class="navbar-tablet">
+    <span><a href="#preamble">About me</a></span>
+    <span><a href="#skillSet">Skill set</a></span>
+    <span><a href="#projects">My work</a></span>
+    <span><a href="#contactSection">Contact</a></span>
+  </nav>
 </header>
 
 <app-sidenav

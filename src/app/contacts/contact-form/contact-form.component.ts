@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class ContactFormComponent implements OnInit {
   contactModel = new Contact('', '', '');
   successMessage: string =
-    'Thanks for your request! I will look into your message and reach out for you as soon as possible.';
+    'Your email has been send successfully!';
 
   errorMessage: string =
     'There is an unexpected Error. Your email has not been send. Try again later!';

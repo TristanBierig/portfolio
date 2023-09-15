@@ -1,7 +1,6 @@
 .btn {
     position: relative;
-    // margin: 20px auto;
-    padding: 10px 44px;
+    padding: 16px 44px;
 
     border: none;
     font-size: var(--font-main-para-mobile-size);
@@ -11,9 +10,9 @@
     cursor: pointer;
 
     &::ng-deep span {
-        color: var(--font-color-blue);
-        mix-blend-mode: difference;
+        color: white;
         white-space: nowrap;
+        transition: 0.35s;
     }
 
     &::before {
@@ -43,6 +42,11 @@
     }
 
     &:hover {
+        &::ng-deep span {
+            color: var(--font-color-blue);
+            transition: 0.35s;
+        }
+
         &::before {
             transform: translateY(-50%);
             height: 20px;
@@ -51,7 +55,6 @@
         }
 
         &::after {
-
             transform: translateY(50%);
             opacity: 0;
             height: 20px;

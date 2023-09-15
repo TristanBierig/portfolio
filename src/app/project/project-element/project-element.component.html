@@ -1,4 +1,50 @@
-<section class="element-wrapper">
+<!-- DOM Mobile -->
+<section *ngIf="isMobile" class="element-wrapper-mobile">
+  <div class="img-wrapper">
+    <img
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
+      src="{{ project.image }}"
+      alt=""
+    />
+    <ng-content></ng-content>
+  </div>
+
+  <div
+    class="lower-wrapper"
+    data-aos="fade-up"
+    data-aos-anchor-placement="center-bottom"
+  >
+    <h3 class="section-headline">{{ project.name }}</h3>
+
+    <div class="tool-wrapper">
+      <span *ngFor="let tool of project.tools; let last = last">
+        {{ tool }}
+        <span *ngIf="!last">|</span>
+      </span>
+    </div>
+
+    <span class="summary">
+      {{ project.summary }}
+    </span>
+
+    <div class="btn-wrapper">
+      <app-button-primary>
+        <span (click)="redirectToProject(project.links.demo)">Live test</span>
+      </app-button-primary>
+      <app-button-secondary>
+        <span (click)="redirectToProject(project.links.github)">Github</span>
+      </app-button-secondary>
+    </div>
+  </div>
+</section>
+
+<!-- DOM Tablet and bigger -->
+<section
+  *ngIf="isTablet || isDesktop"
+  [class.odd]="odd"
+  class="element-wrapper-tablet"
+>
   <div class="img-wrapper">
     <img
       data-aos="fade-up"

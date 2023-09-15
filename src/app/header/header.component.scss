@@ -1,13 +1,14 @@
-
-header {
+.header-mobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    width: 85%;
-    margin: auto;
+    margin-inline: 32px;
     padding: 20px 0;
 
+    @media only screen and (min-width: 1921px) {
+        width: 1440px;
+    }
 
     img {
         height: 64px;
@@ -18,16 +19,35 @@ header {
         display: flex;
         gap: 36px;
     }
-}
 
-.burger-menu {
-    height: 30px;
-    width: 30px;
-    z-index: 2;
-    cursor: pointer;
+    .burger-menu {
+        height: 30px;
+        width: 30px;
+        z-index: 2;
+        cursor: pointer;
+    }
 }
 
 
 .sidenav {
     width: 100%;
+}
+
+.navbar-tablet {
+    margin-right: 64px;
+
+    span {
+        display: flex;
+        justify-content: center;
+        min-width: 74px;
+    }
+
+    a {
+        color: var(--font-color-blue);
+        transition: 125ms ease-in-out;
+
+        &:hover {
+            font-weight: bold;
+        }
+    }
 }

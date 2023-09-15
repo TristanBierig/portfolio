@@ -1,17 +1,63 @@
-<app-header id="header"></app-header>
+<!-- DOM - Mobile -->
+<section *ngIf="isMobile" class="atf-mobile">
+  <app-header id="header"></app-header>
 
-<span>
-  <h2>Hello! I am Tristan</h2>
-  <h1>Frontend Developer</h1>
-</span>
+  <span>
+    <h2>Hello! I am Tristan</h2>
+    <h1>
+      Frontend <br />
+      Developer
+    </h1>
+    <app-bubbles class="atf-bubble"></app-bubbles>
+  </span>
 
-<img
-  class="portrait-img"
-  src="../../assets/img/portrait-lang.png"
-  alt="Portrait image of myself"
-/>
+  <img
+    class="portrait-img"
+    src="../../assets/img/portrait-lang.png"
+    alt="Portrait image of myself"
+  />
+  <app-bubbles class="first-bubble" [height]="150"></app-bubbles>
+</section>
 
-<app-bubbles class="first-bubble" [height]="150"></app-bubbles>
+<!-- DOM - Tablet and bigger -->
+<section
+  *ngIf="isTablet || isDesktop"
+  [ngClass]="{ 'atf-tablet': isTablet, 'atf-desktop': isDesktop }"
+>
+  <app-header id="header"></app-header>
 
-<!-- Background Bubble -->
-<app-bubbles class="atf-bubble"></app-bubbles>
+  <div class="main-container">
+    <app-bubbles [height]="1000" class="atf-bubble"></app-bubbles>
+    <img
+      class="portrait-img"
+      src="../../assets/img/portrait-lang.png"
+      alt="Portrait image of myself"
+    />
+
+    <span class="headline-wrapper">
+      <h2>Hello! I am Tristan</h2>
+      <h1>
+        Frontend <br />
+        Developer
+      </h1>
+    </span>
+  </div>
+
+  <div class="scroll-wrapper">
+    <span>Scroll</span>
+  </div>
+
+  <div class="social-wrapper">
+    <a href="https://github.com/TristanBierig" target="_blank"
+      ><img src="../../assets/img/icons/github-blue.png" alt="Github logo"
+    /></a>
+    <a href="#contactSection"
+      ><img src="../../assets/img/icons/contact-blue.png" alt="Mail icon"
+    /></a>
+    <a href="https://www.linkedin.com/in/tristan-bierig/" target="_blank"
+      ><img src="../../assets/img/icons/linked-blue.png" alt="LinkedIn logo"
+    /></a>
+  </div>
+
+  <app-bubbles class="first-bubble" [height]="200"></app-bubbles>
+</section>

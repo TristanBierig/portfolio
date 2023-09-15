@@ -1,26 +1,121 @@
 :host {
+    min-height: fit-content !important;
+    background: var(--background-gradient-deepblue-color);
+}
+
+// MOBILE
+.footer-mobile {
     padding: 64px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 32px;
-    background: var(--background-gradient-deepblue-color);
+
+    .white-font {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        color: white;
+        font-size: var(--font-main-para-mobile-size);
+
+        .copyright-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+
+    .logo {
+        height: 70px;
+    }
+
+    .social-wrapper {
+        display: flex;
+        gap: 32px;
+    }
+
+    .imprint {
+        color: white;
+    }
 }
 
-.white-font {
+
+// DESKTOP
+.footer-desktop {
+    padding: 64px 0;
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 8px;
-    color: white;
-    font-size: var(--font-main-para-mobile-size);
-}
-
-.social-wrapper {
-    display: flex;
+    justify-content: space-around;
     gap: 32px;
-}
 
-.imprint {
-    color: white;
+    .logo {
+        height: 70px;
+    }
+
+    .white-font {
+        color: white;
+        font-size: var(--font-main-para-mobile-size);
+    }
+
+    .social-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        a {
+            transition: 225ms;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    .imprint {
+        position: relative;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 125ms ease-in-out;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            transform: translateY(50%);
+            left: -50%;
+            opacity: 0;
+            height: 4px;
+            width: 60px;
+            border-radius: 4px;
+            background-color: white;
+            transition: 225ms ease-in-out;
+        }
+
+        &:hover {
+            font-weight: bold;
+
+            &::before {
+                opacity: 1;
+                left: 0;
+            }
+        }
+    }
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+
+        .copyright-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    }
 }

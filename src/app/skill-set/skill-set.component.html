@@ -1,11 +1,23 @@
-<section class="section-container">
-    <h3 class="section-headline font-white">Skill set</h3>
+<!-- DOM Mobile -->
+<section *ngIf="isMobile" class="skill-mobile">
+  <h3 class="section-headline font-white">Skill set</h3>
 
-    <div class="icon-container">
-        <div *ngFor="let icon of skillIcons">
-            <img src="{{ icon.path }}" alt="">
-            <span class="font-white">{{ icon.name }}</span>
-        </div>
+  <div class="icon-container">
+    <div class="" *ngFor="let icon of skillIcons">
+      <img src="{{ icon.path }}" alt="" />
+      <span class="font-white">{{ icon.name }}</span>
     </div>
+  </div>
+</section>
 
+<!-- DOM Tablet and bigger -->
+<section *ngIf="isTablet || isDesktop" class="skill-tablet">
+  <h3 class="section-headline font-white">Skill set</h3>
+
+  <div class="icon-container">
+    <div class="" *ngFor="let icon of skillIcons">
+      <img src="{{ icon.path }}" alt="" />
+      <span class="font-white">{{ icon.name }}</span>
+    </div>
+  </div>
 </section>

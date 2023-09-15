@@ -1,55 +1,193 @@
 :host {
-    display: flex;
-    align-items: flex-start;
-    position: relative;
     background: var(--background-gradient-color);
+    min-height: fit-content !important;
 }
 
-section {
+// Mobile Design
+.contact-mobile {
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 64px;
-}
+    margin-inline: 32px;
+    margin-top: 128px;
+    padding-bottom: 128px;
 
-h3 {
-    margin-top: 24px;
-}
+    h3 {
+        margin-top: 24px;
+    }
 
-h4 {
-    color: var(--font-color-blue);
-    font-size: 24px;
-    margin: 0;
-}
+    h4 {
+        color: var(--font-color-blue);
+        font-size: 24px;
+        margin: 0;
+    }
 
-h5 {
-    color: var(--font-color-blue);
-    font-weight: 400;
-}
+    h5 {
+        color: var(--font-color-blue);
+        font-weight: 400;
+    }
 
-.right-bubble {
-    position: absolute;
-    bottom: 40px;
-    right: 20px;
-}
-
-.scroll-top-wrapper {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    mat-icon {
+    .right-bubble {
         position: absolute;
-        z-index: 1;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .scroll-top-wrapper {
+        position: absolute;
+        left: 0;
+        bottom: 32px;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: white;
-        font-size: 28px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -53%);
+
+        mat-icon {
+            position: absolute;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 28px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -53%);
+        }
+    }
+}
+
+// Tablet Design
+.contact-tablet {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 128px;
+    padding-bottom: 128px;
+    margin-inline: 32px;
+
+    .right-bubble {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    h3 {
+        margin-top: 24px;
+    }
+
+    h4 {
+        color: var(--font-color-blue);
+        font-size: 24px;
+        margin: 0;
+    }
+
+    h5 {
+        color: var(--font-color-blue);
+        font-weight: 400;
+    }
+
+    .scroll-top-wrapper {
+        position: absolute;
+        left: 0;
+        bottom: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        mat-icon {
+            position: absolute;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 28px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -53%);
+        }
+    }
+}
+
+// Desktop Design
+.contact-desktop {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 64px;
+    margin-top: 128px;
+    padding-bottom: 128px;
+    width: 80%;
+    max-width: 1440px;
+
+    .right-bubble {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .scroll-top-wrapper {
+        position: absolute;
+        left: 0;
+        bottom: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 125ms;
+
+        mat-icon {
+            position: absolute;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 28px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -53%);
+        }
+
+        app-bubbles {
+            transition: 125ms;
+            opacity: 1;
+        }
+
+        &:hover {
+            app-bubbles {
+                opacity: 0;
+                transition: 125ms;
+            }
+
+            mat-icon {
+                padding: 24px;
+                filter: drop-shadow(1px 1px 10px rgba($color: #000000, $alpha: 0.3));
+                border: 2px solid var(--font-color-blue);
+                border-radius: 50%;
+            }
+        }
+    }
+
+    h3 {
+        margin-top: 24px;
+    }
+
+    h4 {
+        color: var(--font-color-blue);
+        font-size: 24px;
+        margin: 0;
+    }
+
+    h5 {
+        color: var(--font-color-blue);
+        font-weight: 400;
+    }
+
+    .contact-wrapper {
+        display: flex;
+        gap: 64px;
     }
 }

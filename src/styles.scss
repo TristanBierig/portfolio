@@ -44,6 +44,7 @@ $primary-palette: map.get($color-config, 'primary');
   --font-section-headline-mobile-size: 56px;
   --font-main-para-mobile-size: 20px;
   --font-para-mobile-size: 16px;
+  --font-headline-size: 72px;
 
   --background-gradient-color: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(189, 205, 245, 0.9) 100%);
   --background-gradient-deepblue-color: linear-gradient(129deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%);
@@ -58,6 +59,16 @@ $primary-palette: map.get($color-config, 'primary');
 body {
   margin: 0;
   width: 100%;
+  overflow-x: hidden;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #23232300;
 }
 
 a {
@@ -74,10 +85,17 @@ a {
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 6px;
+  display: none;
+  background: transparent;
+
+  @media only screen and (min-width: 1280px) {
+    display: block;
+  }
 }
 
 *::-webkit-scrollbar-track {
-  background: #ffffff00;
+  background: transparent;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 *::-webkit-scrollbar-thumb {
@@ -94,22 +112,15 @@ a {
   line-height: 120%;
 }
 
-.section-container {
-  min-height: 100svh;
-  width: 85%;
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .font-white {
   color: var(--font-color-white);
 }
 
+
+// Toast design for contact form
 .mat-mdc-snack-bar-container {
   &.snackbar-success {
-    --mdc-snackbar-container-color: var(--font-color-blue);
+    --mdc-snackbar-container-color: #a0be4d;
     --mat-mdc-snack-bar-button-color: #fff;
     --mat-snack-bar-button-color: #fff;
     --mdc-snackbar-supporting-text-color: #fff;

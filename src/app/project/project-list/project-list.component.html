@@ -1,15 +1,16 @@
-<section class="">
+<!-- DOM Mobile -->
+<section *ngIf="isMobile" class="project-list-mobile">
   <div class="header-wrapper">
     <h3 class="section-headline">
       My work
       <app-bubbles class="first-bubble" [height]="60"></app-bubbles>
-    <app-bubbles class="second-bubble" [height]="80"></app-bubbles>
+      <app-bubbles class="second-bubble" [height]="80"></app-bubbles>
     </h3>
 
     <p>This page is a sample of my work - please feel free to try them out.</p>
   </div>
 
-  <section class="app-project-element-container">
+  <div class="app-project-element-container">
     <app-project-element
       *ngFor="let project of projectList; let even = even; let odd = odd"
       [project]="project"
@@ -19,5 +20,31 @@
         [height]="220"
       ></app-bubbles>
     </app-project-element>
-  </section>
+  </div>
+</section>
+
+<!-- DOM Tablet and bigger -->
+<section *ngIf="isTablet || isDesktop" class="project-list-tablet">
+  <div class="header-wrapper">
+    <h3 class="section-headline">
+      My work
+      <app-bubbles class="first-bubble" [height]="60"></app-bubbles>
+      <app-bubbles class="second-bubble" [height]="80"></app-bubbles>
+    </h3>
+
+    <p>This page is a sample of my work - please feel free to try them out.</p>
+  </div>
+
+  <div class="app-project-element-container">
+    <app-project-element
+      *ngFor="let project of projectList; let even = even; let odd = odd"
+      [project]="project"
+      [odd]="odd"
+    >
+      <app-bubbles
+        [ngClass]="{ 'odd-bubble': odd, 'even-bubble': even }"
+        [height]="300"
+      ></app-bubbles>
+    </app-project-element>
+  </div>
 </section>
