@@ -8,7 +8,8 @@
       <mat-icon aria-hidden="false" fontIcon="copyright"> </mat-icon>
       Tristan Bierig 2023
     </div>
-    <span class="imprint">Impressum</span>
+    <span class="imprint" (click)="openDialog('imprint')">Impressum</span>
+    <span class="imprint" (click)="openDialog('privacy')">Datenschutzerklärung</span>
   </span>
 
   <div class="social-wrapper">
