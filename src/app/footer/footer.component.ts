@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ResponsiveService } from '../responsive.service';
+import { ImprintComponent } from '../imprint/imprint.component';
+import { PrivacyComponent } from '../privacy/privacy.component';
 
 @Component({
   selector: 'app-footer',
@@ -11,7 +14,10 @@ export class FooterComponent implements OnInit {
   isTablet!: boolean;
   isDesktop!: boolean;
 
-  constructor(private ResponsiveService: ResponsiveService) {}
+  constructor(
+    private ResponsiveService: ResponsiveService,
+    public dialog: MatDialog
+  ) {}
 
   ngOnInit(): void {
     this.ResponsiveService.isMobile$.subscribe((isMobile) => {
@@ -25,5 +31,15 @@ export class FooterComponent implements OnInit {
     this.ResponsiveService.isDesktop$.subscribe((isDesktop) => {
       this.isDesktop = isDesktop;
     });
+  }
+
+  openDialog(target: string) {
+    if (target == 'imprint') {
+      this.dialog.open(ImprintComponent);
+    }
+
+    if (target == 'privacy') {
+      this.dialog.open(PrivacyComponent);
+    }
   }
 }
