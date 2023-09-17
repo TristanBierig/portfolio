@@ -1,4 +1,9 @@
-<footer [ngClass]="{ 'footer-mobile': isMobile, 'footer-desktop': isDesktop }">
+<footer
+  [ngClass]="{
+    'footer-mobile': isMobile,
+    'footer-tablet': isTablet || isDesktop
+  }"
+>
   <a href="#header">
     <img class="logo" src="../../assets/img/logo_weiß.png" alt="" />
   </a>
@@ -8,7 +13,10 @@
       <mat-icon aria-hidden="false" fontIcon="copyright"> </mat-icon>
       Tristan Bierig 2023
     </div>
-    <span class="imprint">Impressum</span>
+    <span class="imprint" (click)="openDialog('imprint')">Impressum</span>
+    <span class="imprint" (click)="openDialog('privacy')"
+      >Datenschutzerklärung</span
+    >
   </span>
 
   <div class="social-wrapper">

@@ -32,6 +32,9 @@ import { MailService } from './mail.service';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ResponsiveService } from './responsive.service';
+import { ImprintComponent } from './imprint/imprint.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +53,8 @@ import { ResponsiveService } from './responsive.service';
     ContactFormComponent,
     FooterComponent,
     ScrollToDirective,
+    ImprintComponent,
+    PrivacyComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,6 +71,7 @@ import { ResponsiveService } from './responsive.service';
     HttpClientModule,
     MatDividerModule,
     MatSnackBarModule,
+    MatDialogModule,
   ],
   providers: [
     {
