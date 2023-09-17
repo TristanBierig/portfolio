@@ -6,9 +6,11 @@
     margin-inline: 32px;
     padding: 20px 0;
 
-    @media only screen and (min-width: 1921px) {
-        width: 1440px;
-    }
+
+    // @media only screen and (min-width: 1280px) {
+    //     width: 1280px;
+    //     margin-inline: auto;
+    // }
 
     img {
         height: 64px;
