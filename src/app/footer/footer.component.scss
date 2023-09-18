@@ -27,6 +27,37 @@
         }
     }
 
+    .imprint {
+        position: relative;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 125ms ease-in-out;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            transform: translateY(50%);
+            left: -50%;
+            opacity: 0;
+            height: 4px;
+            width: 60px;
+            border-radius: 4px;
+            background-color: white;
+            transition: 225ms ease-in-out;
+        }
+
+        &:hover {
+            font-weight: bold;
+
+            &::before {
+                opacity: 1;
+                left: 0;
+            }
+        }
+    }
+
     .logo {
         height: 70px;
     }
