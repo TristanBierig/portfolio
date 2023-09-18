@@ -44,6 +44,7 @@
 <section *ngIf="isDesktop" [class.odd]="odd" class="element-wrapper-tablet">
   <div class="img-wrapper">
     <img
+      loading="lazy"
       data-aos="fade-up"
       data-aos-anchor-placement="center-bottom"
       src="{{ project.image }}"
