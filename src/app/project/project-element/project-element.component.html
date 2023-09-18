@@ -2,6 +2,7 @@
 <section *ngIf="isTablet || isMobile" class="element-wrapper-mobile">
   <div class="img-wrapper">
     <img
+      loading="lazy"
       data-aos="fade-up"
       data-aos-anchor-placement="center-bottom"
       src="{{ project.image }}"
@@ -40,13 +41,10 @@
 </section>
 
 <!-- DOM Tablet and bigger -->
-<section
-  *ngIf="isDesktop"
-  [class.odd]="odd"
-  class="element-wrapper-tablet"
->
+<section *ngIf="isDesktop" [class.odd]="odd" class="element-wrapper-tablet">
   <div class="img-wrapper">
     <img
+      loading="lazy"
       data-aos="fade-up"
       data-aos-anchor-placement="center-bottom"
       src="{{ project.image }}"
