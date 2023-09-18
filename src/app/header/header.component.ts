@@ -22,7 +22,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.ResponsiveService.isMobile$.subscribe((isMobile) => {
       this.isMobile = isMobile;
-      console.log(this.isMobile);
     });
   }
 
