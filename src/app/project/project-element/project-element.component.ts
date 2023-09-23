@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import * as AOS from 'aos';
+import * as Aos from 'aos';
 import { ResponsiveService } from 'src/app/responsive.service';
 
 @Component({
@@ -17,7 +17,7 @@ export class ProjectElementComponent implements OnInit {
   constructor(private ResponsiveService: ResponsiveService) {}
 
   ngOnInit(): void {
-    AOS.init();
+    Aos.init();
     this.ResponsiveService.isMobile$.subscribe((isMobile) => {
       this.isMobile = isMobile;
     });
