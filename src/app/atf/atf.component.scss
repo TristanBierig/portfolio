@@ -196,6 +196,8 @@
         @media only screen and (min-width: 1921px) {
             display: flex;
             justify-content: center;
+
+
         }
     }
 
@@ -265,6 +267,10 @@
         right: 80px;
         bottom: 40px;
 
+        @media only screen and (min-width: 1921px) {
+            right: 25%;
+        }
+
         a {
             transition: 225ms ease-in-out;
 
@@ -279,6 +285,10 @@
         position: absolute;
         right: 250px;
         bottom: 30%;
+
+        @media only screen and (min-width: 1921px) {
+            right: 30%;
+        }
 
         color: var(--font-color-blue);
         font-size: var(--font-subheadline-mobile-size);

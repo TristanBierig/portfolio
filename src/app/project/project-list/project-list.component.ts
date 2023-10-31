@@ -24,7 +24,7 @@ export class ProjectListComponent implements OnInit {
         demo: 'https://join.tristan-bierig.de/',
         github: 'https://github.com/TristanBierig/join',
       },
-      tools: ['Javascript', 'HTML', 'CSS', 'Github'],
+      tools: ['Javascript', 'HTML', 'CSS', 'Git'],
       summary:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       image: '../../assets/img/project-thumbnail/join.png',
@@ -39,6 +39,17 @@ export class ProjectListComponent implements OnInit {
       summary:
         "2D-Platform Jump 'n' Run Game based on object-oriented approach. Choose an Element and fight against the army of slimes. Collect Mana and Stars to cast spells and unleash the true power of the Element!",
       image: '../../assets/img/project-thumbnail/elemental-masters.png',
+    },
+    {
+      name: 'Simple-CRM',
+      links: {
+        demo: 'https://crm.tristan-bierig.de/',
+        github: 'https://github.com/TristanBierig/simple-crm',
+      },
+      tools: ['Angular', 'Typescript', 'Firebase', 'Material Design', 'SCSS', 'API'],
+      summary:
+        'A simple CRM tool to manage customers and stay in contact with your colleagues. Create new customers and register all your lead info. Track the company leads and personal notes in your Dashboard.',
+      image: '../../assets/img/project-thumbnail/crm.png',
     },
     {
       name: 'Pokédex',
