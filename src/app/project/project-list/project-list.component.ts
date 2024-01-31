@@ -19,15 +19,15 @@ export class ProjectListComponent implements OnInit {
     image: string;
   }[] = [
     {
-      name: 'Join',
+      name: 'DABubble',
       links: {
-        demo: 'https://join.tristan-bierig.de/',
-        github: 'https://github.com/TristanBierig/join',
+        demo: 'https://dabubble.tristan-bierig.de/',
+        github: 'https://github.com/TristanBierig/DABubble',
       },
-      tools: ['Javascript', 'HTML', 'CSS', 'Git'],
+      tools: ['Angular', 'Firebase', 'TypeScript', 'MaterialDesign', 'HTML', 'SCSS', 'Git'],
       summary:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      image: '../../assets/img/project-thumbnail/join.png',
+        'DABubble is a "slack-like" Chat-App. Create your own Channel, start a Thread or text someone in private. Thanks to the realtime-database you can share your messages, images and files in an instant with all the other users',
+      image: '../../assets/img/project-thumbnail/dabubble.png',
     },
     {
       name: 'Elemental Masters',
@@ -35,9 +35,9 @@ export class ProjectListComponent implements OnInit {
         demo: 'https://elementalmasters.tristan-bierig.de/',
         github: 'https://github.com/TristanBierig/elemental_masters',
       },
-      tools: ['Javascript', 'HTML', 'CSS', 'OOP'],
+      tools: ['JavaScript', 'HTML', 'CSS', 'OOP'],
       summary:
-        "2D-Platform Jump 'n' Run Game based on object-oriented approach. Choose an Element and fight against the army of slimes. Collect Mana and Stars to cast spells and unleash the true power of the Element!",
+      "2D-Platform Jump 'n' Run Game based on object-oriented approach. Choose an Element and fight against the army of slimes. Collect Mana and Stars to cast spells and unleash the true power of the Element!",
       image: '../../assets/img/project-thumbnail/elemental-masters.png',
     },
     {
@@ -46,21 +46,21 @@ export class ProjectListComponent implements OnInit {
         demo: 'https://crm.tristan-bierig.de/',
         github: 'https://github.com/TristanBierig/simple-crm',
       },
-      tools: ['Angular', 'Typescript', 'Firebase', 'Material Design', 'SCSS', 'API'],
+      tools: ['Angular', 'TypeScript', 'Firebase', 'MaterialDesign', 'SCSS', 'API'],
       summary:
         'A simple CRM tool to manage customers and stay in contact with your colleagues. Create new customers and register all your lead info. Track the company leads and personal notes in your Dashboard.',
       image: '../../assets/img/project-thumbnail/crm.png',
     },
     {
-      name: 'Pokédex',
+      name: 'Join',
       links: {
-        demo: 'https://pokedex.tristan-bierig.de/',
-        github: 'https://github.com/TristanBierig/pokedex',
+        demo: 'https://join.tristan-bierig.de/',
+        github: 'https://github.com/TristanBierig/join',
       },
-      tools: ['Javascript', 'HTML', 'CSS', 'API'],
+      tools: ['JavaScript', 'HTML', 'CSS', 'Git'],
       summary:
-        'Based on the PokéAPI. A simple library that provides and catalogues pokemon information',
-      image: '../../assets/img/project-thumbnail/pokedex.png',
+        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      image: '../../assets/img/project-thumbnail/join.png',
     },
   ];
 
