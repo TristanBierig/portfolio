@@ -26,7 +26,7 @@ export class ProjectListComponent implements OnInit {
       },
       tools: ['Angular', 'Firebase', 'TypeScript', 'MaterialDesign', 'HTML', 'SCSS', 'Git'],
       summary:
-        'DABubble is a "slack-like" Chat-App. Create your own Channel, start a Thread or text someone in private. Thanks to the realtime-database you can share your messages, images and files in an instant with all the other users',
+        'DABubble is a "slack-like" Chat-App. Create your own Channel, start a Thread or text someone in private. Thanks to the realtime-database you can share your messages, images and files in an instant with all the other users.',
       image: '../../assets/img/project-thumbnail/dabubble.png',
     },
     {
@@ -46,7 +46,7 @@ export class ProjectListComponent implements OnInit {
         demo: 'https://crm.tristan-bierig.de/',
         github: 'https://github.com/TristanBierig/simple-crm',
       },
-      tools: ['Angular', 'TypeScript', 'Firebase', 'MaterialDesign', 'SCSS', 'API'],
+      tools: ['Angular', 'TypeScript', 'Firebase', 'MaterialDesign', 'HTML', 'SCSS', 'API'],
       summary:
         'A simple CRM tool to manage customers and stay in contact with your colleagues. Create new customers and register all your lead info. Track the company leads and personal notes in your Dashboard.',
       image: '../../assets/img/project-thumbnail/crm.png',
